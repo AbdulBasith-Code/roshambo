@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockPaperAndScissorSBAndCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMj-By-gyW" userLabel="Rock Button">
+                                <rect key="frame" x="84" y="230" width="38" height="33"/>
+                                <state key="normal" image="Rock"/>
+                                <connections>
+                                    <action selector="showResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ts5-3S-lj7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIm-iw-Fh3" userLabel="Paper Button">
+                                <rect key="frame" x="302" y="230" width="38" height="33"/>
+                                <state key="normal" image="Paper"/>
+                                <connections>
+                                    <action selector="showResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZxO-Qb-4zh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-gG-19E" userLabel="Scissor Button">
+                                <rect key="frame" x="170" y="344" width="75" height="65"/>
+                                <state key="normal" image="Scissor"/>
+                                <connections>
+                                    <action selector="showResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVw-bh-2wt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-2z-9cs" userLabel="Lets Play Button">
+                                <rect key="frame" x="174" y="557" width="66" height="30"/>
+                                <state key="normal" title="Lets Play!"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vMj-By-gyW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="40y-JU-Y1r"/>
+                            <constraint firstItem="vMj-By-gyW" firstAttribute="bottom" secondItem="Pyb-gG-19E" secondAttribute="top" constant="-30" id="A1z-pk-Heh"/>
+                            <constraint firstItem="Pyb-gG-19E" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="CkU-td-Xu1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lIm-iw-Fh3" secondAttribute="trailing" constant="40" id="V31-38-3Kh"/>
+                            <constraint firstItem="3qe-2z-9cs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fyA-TN-IJx"/>
+                            <constraint firstItem="3qe-2z-9cs" firstAttribute="top" secondItem="Pyb-gG-19E" secondAttribute="bottom" constant="40" id="m5T-8o-S38"/>
+                            <constraint firstItem="lIm-iw-Fh3" firstAttribute="top" secondItem="vMj-By-gyW" secondAttribute="top" id="peE-AU-XLp"/>
+                            <constraint firstItem="Pyb-gG-19E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x92-go-n4T"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="80"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="V5c-Mu-GYc">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="ti7-q6-Z6h" customClass="ResultViewController" customModule="RockPaperAndScissorSBAndCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KXl-92-PyO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You chose!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be2-zR-Flj" userLabel="Result Label">
+                                <rect key="frame" x="186" y="244" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="itsATie" translatesAutoresizingMaskIntoConstraints="NO" id="Pm6-dd-3I2" userLabel="Result Image View">
+                                <rect key="frame" x="87" y="357" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87x-2R-s7w" userLabel="Play Again Button">
+                                <rect key="frame" x="169" y="596" width="76" height="30"/>
+                                <state key="normal" title="Play Again!"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="ti7-q6-Z6h" eventType="touchUpInside" id="u4r-ng-nHS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BhX-ya-rJ0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="be2-zR-Flj" firstAttribute="bottom" secondItem="Pm6-dd-3I2" secondAttribute="top" constant="-30" id="Lj3-Tg-RO1"/>
+                            <constraint firstItem="87x-2R-s7w" firstAttribute="centerX" secondItem="BhX-ya-rJ0" secondAttribute="centerX" id="RXq-wy-xCW"/>
+                            <constraint firstItem="Pm6-dd-3I2" firstAttribute="centerX" secondItem="BhX-ya-rJ0" secondAttribute="centerX" id="bgi-Qf-M85"/>
+                            <constraint firstItem="Pm6-dd-3I2" firstAttribute="centerY" secondItem="BhX-ya-rJ0" secondAttribute="centerY" id="cBI-Sf-syq"/>
+                            <constraint firstItem="be2-zR-Flj" firstAttribute="centerX" secondItem="BhX-ya-rJ0" secondAttribute="centerX" id="nmu-IS-cEr"/>
+                            <constraint firstItem="87x-2R-s7w" firstAttribute="top" secondItem="Pm6-dd-3I2" secondAttribute="bottom" constant="30" id="wth-TI-m8u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="Pm6-dd-3I2" id="I7m-Vk-s8m"/>
+                        <outlet property="resultLabel" destination="be2-zR-Flj" id="pm8-Ic-E3L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lVL-zg-vFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Paper" width="37.5" height="32.5"/>
+        <image name="Rock" width="37.5" height="32.5"/>
+        <image name="Scissor" width="75" height="65"/>
+        <image name="itsATie" width="183" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
